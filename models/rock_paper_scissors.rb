@@ -14,12 +14,14 @@ class RockPaperScissors
       "scissors" => "paper"
     }
 
-    if
-      @hand1 == @hand2; return "it's a draw"
-    elsif
-      win[@hand1] == @hand2; return "#{@hand1} wins"
+    if @hand1 == @hand2;
+      return "it's a draw"
+    elsif win[@hand1] == @hand2;
+      return "#{@hand1} wins"
+    elsif win[@hand2] == @hand1;
+      return "#{@hand2} wins"
     else
-      "#{@hand2} wins"
+      return "invalid choice"
     end
   end
 
